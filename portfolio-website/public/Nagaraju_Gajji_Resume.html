@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nagaraju Gajji - Resume - Jr. Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: #f1f5f9;
+      color: #0f172a;
+      line-height: 1.5;
+      padding: 40px 20px;
+    }
+    .top-actions {
+      max-width: 850px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-print {
+      background: #0284c7;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
+    }
+    .btn-print:hover {
+      background: #0369a1;
+      transform: translateY(-1px);
+    }
+    .btn-back {
+      background: #ffffff;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+    .btn-back:hover {
+      background: #f8fafc;
+      color: #0284c7;
+    }
+    .resume-page {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      padding: 48px 56px;
+    }
+    .header {
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+    .name {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .role-title {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #0284c7;
+      margin-bottom: 12px;
+    }
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.9rem;
+      color: #475569;
+    }
+    .contact-row a {
+      color: #0284c7;
+      text-decoration: none;
+    }
+    .contact-row a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #0f172a;
+      border-bottom: 1px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .summary-text {
+      font-size: 0.92rem;
+      color: #334155;
+      line-height: 1.65;
+    }
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .skill-line {
+      display: flex;
+      line-height: 1.5;
+    }
+    .skill-category {
+      font-weight: 600;
+      color: #0f172a;
+      width: 190px;
+      flex-shrink: 0;
+    }
+    .skill-items {
+      color: #334155;
+      flex: 1;
+    }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+    .company {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .job-title {
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .period {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #0284c7;
+      background: #e0f2fe;
+      padding: 3px 10px;
+      border-radius: 4px;
+    }
+    .project-entry {
+      margin-top: 14px;
+      margin-bottom: 16px;
+      padding-left: 14px;
+      border-left: 2px solid #e2e8f0;
+    }
+    .project-title-line {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+    .project-tags {
+      font-weight: 400;
+      color: #64748b;
+      font-size: 0.85rem;
+    }
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 0.88rem;
+      color: #334155;
+      line-height: 1.55;
+    }
+    .edu-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-degree {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-inst {
+      font-size: 0.88rem;
+      color: #475569;
+      margin-top: 2px;
+    }
+    .edu-year {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .cert-item {
+      font-size: 0.9rem;
+      color: #334155;
+      margin-bottom: 4px;
+    }
+    .cert-item strong {
+      color: #0f172a;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .top-actions {
+        display: none !important;
+      }
+      .resume-page {
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+        border-radius: 0;
+      }
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-actions">
+    <a href="/" class="btn btn-back">&larr; Back to Portfolio</a>
+    <button type="button" onclick="window.print()" class="btn btn-print">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+      <span>Print / Download PDF</span>
+    </button>
+  </div>
+
+  <main class="resume-page">
+    <header class="header">
+      <h1 class="name">Nagaraju Gajji</h1>
+      <div class="role-title">Jr. Software Engineer</div>
+      <div class="contact-row">
+        <span>+91 9381549620</span>
+        <span>&bull;</span>
+        <a href="mailto:nagarajugajji07@gmail.com">nagarajugajji07@gmail.com</a>
+        <span>&bull;</span>
+        <a href="https://www.linkedin.com/in/nagaraju-yadav-820881315" target="_blank" rel="noopener noreferrer">linkedin.com/in/nagaraju-yadav-820881315</a>
+        <span>&bull;</span>
+        <a href="https://github.com/nagarajugajji" target="_blank" rel="noopener noreferrer">github.com/nagarajugajji</a>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Software Engineer with hands-on experience designing AI-powered automation, LLM-integrated applications, and scalable backend solutions. Skilled in Python, FastAPI, AI agents, API integrations, and intelligent workflow development. Built insurance automation and commercial fleet management solutions involving document comparison, API-based vehicle valuation, and database workflows; currently contributing to a visual AI automation platform with multi-agent capabilities.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-line">
+          <span class="skill-category">AI & Agentic Systems:</span>
+          <span class="skill-items">AI agents, Generative AI, LLM integrations, prompt engineering, RAG, multi-agent workflows</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-category">LLM Platforms & APIs:</span>
+          <span class="skill-items">OpenAI API, Google Gemini API, Anthropic Claude API, Groq API</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-category">Programming & Backend:</span>
+          <span class="skill-items">Python, FastAPI, Django, Node.js, Express.js, REST APIs, C, C++</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-category">Frontend & Database:</span>
+          <span class="skill-items">React.js, JavaScript, HTML5, CSS3, Bootstrap, MySQL</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-category">Tools & Integration:</span>
+          <span class="skill-items">Git, GitHub, VS Code, Gmail, IMAP, Telegram, KBB API integration</span>
+        </div>
+        <div class="skill-line">
+          <span class="skill-category">Methodologies:</span>
+          <span class="skill-items">Agile / Scrum, cross-functional collaboration</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="job-header">
+        <div>
+          <span class="company">Tech Tammina LLC</span> &nbsp;|&nbsp; <span class="job-title">Jr. Software Engineer</span>
+        </div>
+        <span class="period">Aug 2026 – Present (Current)</span>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-title-line">
+          AI-Powered Insurance Endorsement Automation System <span class="project-tags">| Email automation, LLMs</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed automated intake of insurance endorsement requests from shared mailboxes using Gmail and IMAP integrations to process messages and attachments.</li>
+          <li>Integrated LLM-based email interpretation and extraction of insurance information relevant to endorsement transactions.</li>
+          <li>Automated database updates and outgoing email responses based on identified requests and extracted transaction details.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-title-line">
+          Smart Agent Platform <span class="project-tags">| Visual AI workflow automation</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developing a visual automation platform with reusable nodes for AI Agent, Chat Trigger, Chat Model, Gmail, IMAP, Code, If, and Telegram Trigger.</li>
+          <li>Implemented AI Agent capabilities to interpret user requests, choose connected tools, and execute tasks with integrated AI models.</li>
+          <li>Integrated external services and model APIs to support intelligent, reusable workflows; developing multi-agent task assignment and hierarchical execution.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="project-title-line">
+          Commercial Fleet Management & Vehicle Valuation Platform <span class="project-tags">| Python, FastAPI, React.js, MySQL</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a fleet management application for commercial auto insurance using Python, FastAPI, React.js, and MySQL.</li>
+          <li>Implemented comparison of commercial auto insurance documents to support review of vehicle and coverage information across records.</li>
+          <li>Integrated Kelley Blue Book (KBB) APIs to retrieve vehicle market values within the platform and support fleet valuation workflows.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <div class="cert-item">
+        <strong>Full Stack Developer Certification</strong> &bull; iHub Innovative Placement Solutions
+      </div>
+      <div class="cert-item">
+        <strong>Python Essentials 1 & 2</strong> &bull; Cisco Networking Academy
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-row">
+        <div>
+          <div class="edu-degree">B.Tech in Computer Science & Engineering</div>
+          <div class="edu-inst">Malla Reddy College, Hyderabad, Telangana</div>
+        </div>
+        <div class="edu-year">July 2025</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

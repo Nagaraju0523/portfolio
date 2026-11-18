@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* ==========================================================================
+   PREMIUM GLASSMORPHISM & FLUID WATER THEME SYSTEM
+   Apple-Inspired Glass Surfaces + Flowing Aquatic Visual Dynamics
+   Nagaraju Gajji Developer Portfolio
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DEFAULT THEME: FLUID AQUA & CRYSTAL WHITE WATER GLASS
+   White, light blue, aqua, and cyan color palette with frosted glass
+   -------------------------------------------------------------------------- */
+:root,
+[data-theme-mode="light"] {
+  /* Fluid Water Canvas Base: Pristine White & Subtle Aqua/Cyan Flow */
+  --bg-main: #f0fdfa;
+  --bg-body-gradient: radial-gradient(circle at 18% 12%, rgba(204, 251, 241, 0.8) 0%, transparent 45%),
+                      radial-gradient(circle at 82% 18%, rgba(224, 242, 254, 0.85) 0%, transparent 50%),
+                      radial-gradient(circle at 50% 55%, rgba(186, 230, 253, 0.45) 0%, transparent 60%),
+                      radial-gradient(circle at 15% 82%, rgba(204, 251, 241, 0.7) 0%, transparent 50%),
+                      radial-gradient(circle at 85% 85%, rgba(224, 242, 254, 0.75) 0%, transparent 50%),
+                      #f8fafc;
+
+  /* Transparent Glass Surfaces (Apple-inspired Frosted Glass) */
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-elevated: rgba(255, 255, 255, 0.84);
+  --glass-bg-hover: rgba(255, 255, 255, 0.94);
+  --glass-bg-subtle: rgba(255, 255, 255, 0.5);
+
+  /* Translucent Glass Borders */
+  --glass-border: rgba(255, 255, 255, 0.85);
+  --glass-border-hover: rgba(6, 182, 212, 0.45);
+  --glass-border-accent: rgba(14, 165, 233, 0.35);
+
+  /* Subtle Blue Shadows + Inner Specular Highlight for Depth */
+  --glass-shadow: 0 16px 36px 0 rgba(2, 132, 199, 0.08), 0 4px 12px 0 rgba(8, 145, 178, 0.04);
+  --glass-inner-highlight: inset 1px 1px 1.5px 0 rgba(255, 255, 255, 0.95), inset -1px -1px 1px 0 rgba(255, 255, 255, 0.4);
+  --glass-card-shadow: var(--glass-shadow), var(--glass-inner-highlight);
+
+  /* Soft Blue/Aqua Hover Glow */
+  --glass-hover-glow: 0 20px 42px rgba(2, 132, 199, 0.14),
+                      0 0 25px rgba(6, 182, 212, 0.18),
+                      inset 1px 1px 2px 0 rgba(255, 255, 255, 1);
+
+  /* Blur & Radius Standards */
+  --glass-blur: blur(20px);
+  --glass-radius: 20px;
+  --glass-radius-lg: 24px;
+  --glass-radius-sm: 14px;
+  --glass-radius-full: 9999px;
+
+  /* Typography: High-contrast Dark Slate on Crystal Background */
+  --text-primary: #082f49;
+  --text-secondary: #0e7490;
+  --text-muted: #64748b;
+  --text-highlight: #0284c7;
+
+  /* Color Palette: Light Blue, Aqua, Cyan */
+  --accent-cyan: #0284c7;
+  --accent-aqua: #0891b2;
+  --accent-teal: #0d9488;
+  --accent-blue: #0369a1;
+  --accent-emerald: #059669;
+
+  /* Buttons */
+  --btn-primary-bg: linear-gradient(135deg, #0284c7 0%, #0891b2 50%, #06b6d4 100%);
+  --btn-primary-hover: linear-gradient(135deg, #0369a1 0%, #0e7490 50%, #0891b2 100%);
+  --btn-primary-shadow: 0 6px 20px rgba(2, 132, 199, 0.28);
+
+  /* Navigation */
+  --nav-bg: rgba(255, 255, 255, 0.78);
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.92);
+  --input-bg: rgba(255, 255, 255, 0.95);
+
+  /* Wave Overlays */
+  --wave-color-1: rgba(14, 165, 233, 0.08);
+  --wave-color-2: rgba(6, 182, 212, 0.06);
+  --wave-color-3: rgba(45, 212, 191, 0.05);
+  --mouse-follower-color: rgba(6, 182, 212, 0.18);
+}
+
+/* --------------------------------------------------------------------------
+   2. DARK WATER MODE: DEEP BIOLUMINESCENT OCEAN GLASS
+   -------------------------------------------------------------------------- */
+[data-theme-mode="dark"] {
+  --bg-main: #020814;
+  --bg-body-gradient: radial-gradient(circle at 18% 12%, rgba(8, 47, 73, 0.6) 0%, transparent 50%),
+                      radial-gradient(circle at 82% 18%, rgba(6, 78, 99, 0.55) 0%, transparent 52%),
+                      radial-gradient(circle at 50% 55%, rgba(12, 74, 110, 0.4) 0%, transparent 60%),
+                      radial-gradient(circle at 15% 82%, rgba(19, 78, 74, 0.5) 0%, transparent 50%),
+                      radial-gradient(circle at 85% 85%, rgba(8, 47, 73, 0.55) 0%, transparent 50%),
+                      #020814;
+
+  /* Transparent Dark Blue Glass */
+  --glass-bg: rgba(7, 24, 43, 0.58);
+  --glass-bg-elevated: rgba(10, 34, 60, 0.68);
+  --glass-bg-hover: rgba(14, 46, 80, 0.78);
+  --glass-bg-subtle: rgba(4, 16, 30, 0.65);
+
+  /* 1px Translucent White/Cyan Borders */
+  --glass-border: rgba(255, 255, 255, 0.14);
+  --glass-border-hover: rgba(56, 189, 248, 0.5);
+  --glass-border-accent: rgba(56, 189, 248, 0.28);
+
+  /* Deep Blue Shadows + Inner Specular Edge */
+  --glass-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
+  --glass-inner-highlight: inset 1px 1px 1.5px 0 rgba(255, 255, 255, 0.28), inset -1px -1px 1px 0 rgba(255, 255, 255, 0.04);
+  --glass-card-shadow: var(--glass-shadow), var(--glass-inner-highlight);
+
+  /* Bioluminescent Aqua Hover Glow */
+  --glass-hover-glow: 0 22px 50px rgba(0, 0, 0, 0.65),
+                      0 0 30px rgba(6, 182, 212, 0.3),
+                      0 0 15px rgba(56, 189, 248, 0.25);
+
+  /* Typography: Crisp Pure White on Deep Blue */
+  --text-primary: #f0fdfa;
+  --text-secondary: #93c5fd;
+  --text-muted: #60a5fa;
+  --text-highlight: #38bdf8;
+
+  --accent-cyan: #38bdf8;
+  --accent-aqua: #06b6d4;
+  --accent-teal: #2dd4bf;
+  --accent-blue: #0284c7;
+  --accent-emerald: #34d399;
+
+  /* Buttons */
+  --btn-primary-bg: linear-gradient(135deg, #06b6d4 0%, #0284c7 50%, #2563eb 100%);
+  --btn-primary-hover: linear-gradient(135deg, #22d3ee 0%, #0369a1 50%, #1d4ed8 100%);
+  --btn-primary-shadow: 0 6px 25px rgba(6, 182, 212, 0.42);
+
+  /* Navigation */
+  --nav-bg: rgba(3, 12, 24, 0.72);
+  --nav-bg-scrolled: rgba(2, 9, 18, 0.92);
+  --input-bg: rgba(3, 14, 28, 0.75);
+
+  /* Wave Overlays */
+  --wave-color-1: rgba(6, 182, 212, 0.12);
+  --wave-color-2: rgba(2, 132, 199, 0.09);
+  --wave-color-3: rgba(56, 189, 248, 0.06);
+  --mouse-follower-color: rgba(6, 182, 212, 0.22);
+}
+
+/* ==========================================================================
+   GLOBAL RESET & TYPOGRAPHY STANDARDS
+   ========================================================================== */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Poppins', var(--font-sans);
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --theme-transition: background 0.4s ease, background-color 0.4s ease, border-color 0.3s ease, color 0.2s ease, box-shadow 0.35s ease;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-main);
+  background-image: var(--bg-body-gradient);
+  background-attachment: fixed;
+  background-size: cover;
+  color: var(--text-primary);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: var(--theme-transition);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Fluid Water Glass Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-main);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(6, 182, 212, 0.35);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-aqua);
+}
+
+::selection {
+  background: rgba(6, 182, 212, 0.35);
+  color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
